@@ -12,7 +12,7 @@ import {
 // Component Imports
 import ActivityList from './ActivityList';
 import CharacterSelectList from './CharacterSelectList';
-import PlayerInfoForm from './PlayerInfoForm';
+import PlayerInfoForm from './form/PlayerInfoForm';
 import Navigation from './Navigation';
 
 export class App extends React.Component {
@@ -46,7 +46,6 @@ export class App extends React.Component {
     this.setState({
       platform: platform
     });
-    console.log(platform);
   }
 
   handleMembershipChange(membershipId) {
