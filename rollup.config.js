@@ -96,5 +96,5 @@ const developmentConfig =
    ]
 }
 // Edit this line for dev configs (either Dev or Production)
-export default developmentConfig;
+export default productionConfig;
 
