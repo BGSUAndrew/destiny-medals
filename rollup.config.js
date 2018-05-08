@@ -45,7 +45,6 @@ const productionConfig =
       }),
       uglify({
          compress: {
-            screw_ie8: true,
             warnings: false
          },
          output: {
