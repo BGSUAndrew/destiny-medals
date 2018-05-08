@@ -1,7 +1,7 @@
 // Activity List and Card Styling
 
 .activity-list {
-  max-width: 620px;
+  max-width: 680px;
   min-height: 200px;
   margin: 2em auto;
   padding: 0 10px;
@@ -17,19 +17,23 @@
   opacity: 0;
 
   @include min($tablet) {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
 
   &:hover {
     box-shadow: 0 8px 18px rgba($black, 0.20);
 
     .card__toggle-button {
-      background: $aqua-dark;
+      background: $blue-dark;
       color: $white;
     }
   }
 
   &.activity--is-active {
+    .activity-card {
+      border-radius: 10px 10px 0 0;
+    }
+
     .activity-close {
       display: block;
     }
@@ -55,7 +59,7 @@
   cursor: pointer;
 
   @include min($tablet) {
-    height: 280px;
+    height: 320px;
     padding: 0 0 20px;
   }
 
@@ -80,12 +84,12 @@
   }
 
   &::after {
-    background: linear-gradient(rgba($white, 0), rgba($blue, 0.9));
+    background: linear-gradient(hsla(236, 54%, 60%, 0.35), rgba(53,68,95,.6));
     z-index: 1;
     border-radius: 10px;
 
     @include min($tablet) {
-      background: linear-gradient(rgba($white, 0), rgba($blue, 0.6));
+      background: linear-gradient(hsla(236, 54%, 60%, 0.35), rgba(53,68,95,.6));
     }
   }
 }
@@ -120,12 +124,13 @@
   padding-top: 0;
   letter-spacing: .025em;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
 
   @include min($tablet) {
     padding-top: 5px;
     padding-right: 20px;
     padding-left: 5px;
+    font-size: 1.6rem;
   }
 }
 
@@ -163,12 +168,15 @@
   color: $white;
   margin-top: 0;
   margin-bottom: 0;
-  letter-spacing: 0.015em;
-  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 900;
   font-size: 2.2rem;
+  line-height: 1;
 
   @include min($tablet) {
-    font-size: 2.8rem;
+    font-size: 3.4rem;
+    width: 50%;
   }
 }
 
@@ -187,10 +195,16 @@
 
 .content-results {
   flex: 0 0 auto;
-  color: $white;
-  letter-spacing: 0.5px;
-  font-weight: 400;
+  color: $blue-dark;
+  letter-spacing: .5px;
+  font-weight: 500;
   font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: $white;
+  margin-top: 10px;
+  padding: 4px 9px 3px 10px;
+  line-height: 1.2;
 }
 
 .card__toggle-button {
@@ -199,9 +213,10 @@
   right: 15px;
   display: inline-block;
   z-index: 10;
-  padding: 6px 15px;
-  background: $blue-dark;
-  color: $white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: $white;
+  color: $blue-dark;
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
@@ -211,14 +226,14 @@
   border: 1px solid $white;
 
   @include min($tablet) {
-    bottom: 20px;
+    bottom: 25px;
     right: 20px;
     font-size: 1.4rem;
   }
 
   &:hover,
   &:focus {
-    background: $aqua-dark;
+    background: $blue-dark;
     color: $white;
     outline: none;
   }
